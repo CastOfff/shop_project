@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shop_project/cart_provider.dart';
 import 'global_variables.dart';
 
 class CartPage extends StatelessWidget {
@@ -6,6 +8,7 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(Provider.of<CartProvider>(context).cart);
     return Scaffold(
       appBar: AppBar(
         title: const Text("Cart"),
@@ -27,7 +30,9 @@ class CartPage extends StatelessWidget {
 
             }, icon: const Icon(
               Icons.delete,
-              color: Colors.red,)),
+              color: Colors.red,
+            )
+            ),
             title: Text(cartItem['title'].toString(),
               style: Theme.of(context).textTheme.bodySmall,
             ),
