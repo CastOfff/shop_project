@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shop_project/product_card.dart';
-import 'package:shop_project/product_details_page.dart';
+import 'package:shop_project/widget/product_card.dart';
+import 'package:shop_project/page/product_details_page.dart';
 
-import 'global_variables.dart';
+import '../global_variables.dart';
 class ProductList extends StatefulWidget {
   const ProductList({super.key});
 
@@ -67,7 +67,7 @@ class _ProductListState extends State<ProductList> {
                     child: Chip(
                       backgroundColor: selectedFilter == filter
                           ? Theme.of(context).colorScheme.primary
-                          : Color.fromRGBO(245, 247, 249, 1),
+                          : const Color.fromRGBO(245, 247, 249, 1),
                       side: const BorderSide(
                           color: Color.fromRGBO(245, 247, 249, 1)),
                       label: Text(filter),
